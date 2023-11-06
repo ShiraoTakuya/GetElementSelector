@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "RunJavGetElementSelectorascript",
+  "name": "GetElementSelector",
   "version": "1.0",
   "description": "GetElementSelector",
   "permissions": ["activeTab", "scripting", "storage"],
