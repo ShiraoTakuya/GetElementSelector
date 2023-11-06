@@ -11,7 +11,7 @@ async function sleepMs(ms) {
 }
 
 function getElementSelector() {
-  document.addEventListener("click", function (event) {
+  document.addEventListener("contextmenu", function (event) {
     var clickedElement = event.target;
     var selector = "";
     while (clickedElement !== document.body) {
