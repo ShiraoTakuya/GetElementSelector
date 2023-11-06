@@ -23,6 +23,23 @@ function getElementSelector() {
       clickedElement = clickedElement.parentNode;
     }
     console.log("body" + selector);
+
+    var clickedElement = event.target;
+    var selector = "";
+    while (clickedElement !== document.body) {
+      var tagName = clickedElement.tagName.toLowerCase();
+      var index =
+        Array.from(clickedElement.parentNode.children).indexOf(clickedElement) +
+        1;
+      selector = ">" + tagName + ":nth-child(" + index + ")" + selector;
+      clickedElement = clickedElement.parentNode;
+
+      if (clickedElement.classList.length > 0) {
+        selector = "." + clickedElement.classList[0] + selector;
+        break;
+      }
+    }
+    console.log(selector);
   });
 
   // ページ内の全ての要素を取得
